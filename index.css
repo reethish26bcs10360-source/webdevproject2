@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-box {
+    background: red;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.search-area {
+    display: flex;
+    width: 40%;
+}
+
+.search-area input {
+    width: 100%;
+    padding: 8px;
+}
+
+.search-area button {
+    padding: 8px 15px;
+}
+
+.profile {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: purple;
+    color: white;
+    text-align: center;
+    padding-top: 9px;
+}
+
+
+/* Sidebar */
+
+.main-area {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    padding: 10px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.sidebar .selected {
+    background: lightgray;
+}
+
+
+/* Content */
+
+.content {
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.categories {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.categories button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+}
+
+.categories .selected {
+    background: black;
+    color: white;
+}
+
+
+/* Videos */
+
+.videos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.thumbnail {
+    position: relative;
+}
+
+.thumbnail img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.time {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    background: black;
+    color: white;
+    padding: 3px;
+}
+
+.details {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.channel-logo {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: orange;
+    color: white;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.details h3 {
+    font-size: 16px;
+}
+
+.details p {
+    font-size: 14px;
+    color: gray;
+}
+
+
+/* For smaller screens */
+
+@media (max-width: 900px) {
+    .videos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sidebar {
+        width: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        display: none;
+    }
+
+    .videos {
+        grid-template-columns: 1fr;
+    }
+
+    .search-area {
+        width: 50%;
+    }
+}
